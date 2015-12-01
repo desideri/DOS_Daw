@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
         <title>Proyecto Daw </title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/principal.css">
        <link rel="stylesheet" href="css/perfil.css">
@@ -34,8 +36,7 @@
           <li><a href="#section">What's New?</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="perfil.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span>  Joyce Sarmiento</a></li>
       </ul>
 
       </div>
@@ -47,14 +48,14 @@
   <div class="row content">
     <div class="col-sm-12 text-left"> 
         <div class="row">
-            <div class="col-md-6">
-                <div class="panel panel-primary">
+            <div id="infoContainer"class="col-md-6">
+                <div id="UserInfo" class="panel panel-primary">
                     <div class="panel-heading">
                         <h3 class="panel-title">
                             PERFIL
                         </h3>       
                     </div>
-                    <div class="panel-body">
+                    <div id="UserInfoBody" class="panel-body">
                       <div class="row">
                       <div class="col-md-3 col-lg-3 "> 
                         <img alt="User Pic" src="img/thumb/1.jpg" class="img-rounded img-responsive " width="150" height="75">
@@ -63,17 +64,21 @@
                      <table class="table table-user-information">
                     <tbody>
                       <tr>
-                        <td>CODIGO:</td>
+                        <td>Code:</td>
                         <td>Programming</td>
                       </tr>
                       <tr>
-                        <td>NOMBRE:</td>
+                        <td>Name:</td>
                         <td>Joyce Sarmiento</td>
                       </tr> 
                        <tr>
                         <td>Email</td>
                         <td><a href="mailto:info@support.com">info@support.com</a></td>
-                      </tr>                  
+                      </tr>
+                        <tr>
+                        <td>Groups:</td>
+                        <td>DAW// Jazz Oyola y Kattya Desiderio</td>
+                      </tr> 
                     </tbody>
                   </table>
                      </div> 
@@ -84,16 +89,14 @@
                 </div>
               </div>
 
-            <div class="col-md-6">
-                <div class="panel panel-primary">
+            <div id="shareDocs" class="col-md-6">
+                <div id="UserDocs" class="panel panel-primary">
                     <div class="panel-heading">
                         <h3 class="panel-title">
                             DOCUMENTOS COMPARTIDOS
                         </h3>       
                     </div>
-                    <div class="panel-body">
-                     
-                        
+                    <div class="panel-body">                     
 	                        <div class="row "> <div class="col-xs-8 col-sm-6 col-md-6">
 		                       
                                         <div id="myCarousel" class="vertical-slider carousel vertical slide col-md-12" data-ride="carousel">
@@ -141,7 +144,10 @@
                                             <!--/row-fluid-->
                                         </div>
                                         <!--/item-->
+                                        
                                     </div>
+                                   
+                    </div>
                                     <div class="row">
                                         <div class="col-md-4">
                                             <span data-slide="prev" class="btn-vertical-slider glyphicon glyphicon-circle-arrow-down"
@@ -150,20 +156,15 @@
                                         <div class="col-md-8">
                                         </div>
                                     </div>
+                                            
                                 </div>
+                                                        <div data-role="main" class="ui-content">
+                                <a id="sharedDiag" href="workArea.html" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left" style="none">New Shared Diagram</a>
                         </div>
+                        
+
 	                        </div>
-                      
-
-
-
-
-
-
-
-
-
-
+                    
 
                     </div>
                 </div>
@@ -230,7 +231,11 @@
                           </div>                          
                         </div>
                       </div>                   
-                    
+                    <div data-role="main" class="ui-content">
+                        <a href="workArea.html" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left" style="none">Create Diagram</a>
+                    </div>
+                        
+                        
                     </div>
                     
                 </div> 

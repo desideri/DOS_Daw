@@ -91,4 +91,30 @@ a {  cursor:pointer;}
 
  .carousel.vertical .item {
     left: 0;
-}​
+}
+
+#UserInfo, #UserDocs, #shareDocs,#infoContainer
+{
+    height: 360px;
+    width : 383px;
+    padding: 0px 0px 0px 0px;
+    border: 0px 0px 0px 0px;
+    margin: 10px 10px 15px 10px;
+    
+}
+#UserDocs{
+    width: 910px;
+}
+
+.ui-content{
+    height: 60px;
+    width : 200px;
+    padding: 0px 0px 0px 0px;
+    overflow: hidden;
+    float: right
+}
+#sharedDiag{
+    height: 60px;
+    width : 200px;
+    float: right;
+}

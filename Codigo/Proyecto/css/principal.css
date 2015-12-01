@@ -1,7 +1,8 @@
 
 body {
-      position: relative; 
-  }
+    position: relative;
+    overflow-y: auto;
+}
 
 #section1 {padding-top:50px;height:500px;color: #fff; background-color: #F7F7F7;text-align: center;}
 #section2 {padding-top:50px;height:500px;color: #fff; background-color: #F7F7F7;text-align: center;}
