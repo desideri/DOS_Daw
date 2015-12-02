@@ -111,6 +111,9 @@ a {  cursor:pointer;}
     margin: 10px 10px 15px 10px;
     
 }
+#shareDocs {
+    width: auto;
+}
 #UserDocs{
     width: 910px;
 }
