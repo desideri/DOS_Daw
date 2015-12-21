@@ -1,7 +1,8 @@
 
 body {
-      position: relative; 
-  }
+    position: relative;
+    overflow-y: auto;
+}
 
 #section1 {padding-top:50px;height:500px;color: #fff; background-color: #F7F7F7;text-align: center;}
 #section2 {padding-top:50px;height:500px;color: #fff; background-color: #F7F7F7;text-align: center;}
@@ -113,4 +114,93 @@ footer{
 .span4 {
     width: 300px;
     float: left;
+}
+
+/*log in*/
+.modal-dialog {
+    width: 300px;
+}
+.modal-footer {
+    height: 70px;
+    margin: 0;
+}
+.modal-footer .btn {
+    font-weight: bold;
+}
+.modal-footer .progress {
+    display: none;
+    height: 32px;
+    margin: 0;
+}
+.input-group-addon {
+    color: #fff;
+    background: #3276B1;
+}
+  .login-or {
+    position: relative;
+    font-size: 18px;
+    color: #aaa;
+    margin-top: 10px;
+            margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .span-or {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -2px;
+    margin-left: -25px;
+    background-color: #fff;
+    width: 50px;
+    text-align: center;
+  }
+  .hr-or {
+    background-color: #cdcdcd;
+    height: 1px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+
+ .social-icons{
+    text-align: center;
+    
+}
+
+/**redes sociales log in*/
+
+.social-google {
+  background-color: #da573b;
+  border-color: #be5238;
+}
+.social-google:hover{
+  background-color: #be5238;
+  border-color: #9b4631;
+}
+
+.social-twitter {
+  background-color: #1daee3;
+  border-color: #3997ba;
+}
+.social-twitter:hover {
+  background-color: #3997ba;
+  border-color: #347b95;
+}
+
+.social-facebook {
+  background-color: #4c699e;
+  border-color: #47618d;
+}
+.social-facebook:hover {
+  background-color: #47618d;
+  border-color: #3c5173;
+}
+
+.social-linkedin {
+  background-color: #4875B4;
+  border-color: #466b99;
+}
+.social-linkedin:hover {
+  background-color: #466b99;
+  border-color: #3b5a7c;
 }
