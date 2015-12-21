@@ -2,10 +2,14 @@
     float: right;
     position: relative;
     border-radius: 100%;
-    margin-right: 15px;
+    margin-right: 5px;
+    
 }
 .glyphicon.glyphicon-plus{
     color: white;
+}
+.glyphicon.glyphicon-pencil {
+    color: cornflowerblue;
 }
 /* slider horizontal */
 .media-carousel 
@@ -157,8 +161,10 @@ a:hover {
 }
 
 .thumbnails li> .fff .caption { 
-    background: beige !important; 
-    padding:10px
+    background: beige; 
+    padding:10px;
+    border-bottom: 20px;
+    background-attachment: fixed;
 }
 
 /* Page Header */
@@ -233,3 +239,7 @@ li { list-style-type:none;}
 
 ::selection { background: #ff5e99; color: #FFFFFF; text-shadow: 0; }
 ::-moz-selection { background: #ff5e99; color: #FFFFFF; }
+
+
+
+

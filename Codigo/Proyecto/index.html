@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/principal.css">
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
         <script src="js/registro.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -177,29 +178,53 @@
     <div id="myModal" class="modal fade" >
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
-       	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-		    <h4 class="modal-title" id="myModalLabel">Log in / Sing Up</h4>
+          <div class="modal-header" display="inline">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title" id="myModalLabel">Sing in</h4>
           </div>
           <div class="modal-body">
-                <h3 class="social-icons">Please Log In, or <a href="#">Sign Up</a></h3>
-          	    <br>
-               <div >
-                <p class="social-icons">
-                <a class="btn btn-primary social-login-btn social-facebook" href="/auth/facebook"><i class="fa fa-facebook"></i></a>
-                <a class="btn btn-primary social-login-btn social-twitter" href="/auth/twitter"><i class="fa fa-twitter"></i></a>
-                </p>
-                <p class="social-icons">
-                <a class="btn btn-primary social-login-btn social-linkedin" href="/auth/linkedin"><i class="fa fa-linkedin"></i></a>
-                <a class="btn btn-primary social-login-btn social-google" href="/auth/google"><i class="fa fa-google-plus"></i></a>
-                </p>
-             </div>
-                 <div class="login-or">
-                   <hr class="hr-or">
-                   <span class="span-or">or</span>
-                 </div>
+              <div class="tabs">
+                <!-- Radio button and lable for #tab-content1 -->
+                <input type="radio" name="tabs" id="tab1" checked >
+                <label class="fa" for="tab1">
+                   <i class="fa"></i><span>New user</span>
+                </label>
 
-             <form role="form">
+                <!-- Radio button and lable for #tab-content2 -->
+                <input type="radio" name="tabs" id="tab2">
+                <label class="fa" for="tab2">
+                   <i class="fa"></i><span>Existing user</span>
+                </label>
+ <!-- #tab-content1 -->
+   <div id="tab-content1" class="tab-content">
+        <form role="form">
+					    <div class="form-group">
+						    <div class="input-group">
+							    <input type="text" class="form-control" id="nuName" placeholder="Username">
+							    <label for="uLogin" class="input-group-addon glyphicon glyphicon-user"></label>
+						    </div>
+					    </div> <!-- /.form-group -->
+                        <div class="form-group">
+						    <div class="input-group">
+							    <input type="email" class="form-control" id="nuemail" placeholder="email">
+							    <label for="uemail" class="input-group-addon glyphicon glyphicon-envelope"></label>
+						    </div>
+					    </div> <!-- /.form-group -->
+
+					    <div class="form-group">
+						    <div class="input-group">
+							    <input type="password" class="form-control" id="nuPassword" placeholder="New Password">
+							    <label for="uPassword" class="input-group-addon glyphicon glyphicon-lock"></label>
+						    </div> <!-- /.input-group -->
+					    </div> <!-- /.form-group -->
+				    </form>
+       <p class="social-icons">
+                <button class="btn btn-primary" onclick="validacionCampos">Register for free</button>
+              </p>
+    
+   </div> 
+   <div id="tab-content2" class="tab-content">
+      <form role="form">
 					    <div class="form-group">
 						    <div class="input-group">
 							    <input type="text" class="form-control" id="uLogin" placeholder="Login">
@@ -214,53 +239,169 @@
 						    </div> <!-- /.input-group -->
 					    </div> <!-- /.form-group -->
 
-					    <div class="checkbox">
-						    <label>
-							    <input type="checkbox"> Remember me
-						    </label>
+					    <div class="form-group">
+                                <input type="checkbox" id="rememberCheck"> Remember me</input>
 					    </div> <!-- /.checkbox -->
 				    </form>
-    
-          </div>
-          <div class="modal-footer">
-              <p class="social-icons">
-                <button class="btn btn-primary">Sign In</button>
-            
-                <button class="btn btn-info">Sign Up</button>
+             <p class="social-icons">            
+                <button class="btn btn-primary">Log in</button>
               </p>
+   </div> <!-- #tab-content2 -->
+</div>
+</div>
+
+<div id="modFooter" class="modal-footer" text-align="center">
+              <div class="icon-bar vertical five-up" display="inline">
+        <a class="btn btn-primary social-login-btn social-facebook item" href="/auth/facebook" display="block"><i class="fa fa-facebook" display="block"></i></a>
+        <a class="btn btn-primary social-login-btn social-twitter item" href="/auth/twitter" display="block"><i class="fa fa-twitter" display="block"></i></a>
+        <a class="btn btn-primary social-login-btn social-linkedin item" href="/auth/linkedin" display="block"><i class="fa fa-linkedin" display="block"></i>
+        </a>
+        <a class="btn btn-primary social-login-btn social-google item        " href="/auth/google" display="block"><i class="fa fa-google-plus" display="block"></i></a>
+    </div>
+    
 				    <div class="progress">
 					    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="100" style="width: 0%;">
 						    <span class="sr-only">progress</span>
 					    </div>
 				    </div>
-          </div>
+               </div>
         </div>
 
       </div>
     </div>
+    <style>
+#modFooter{ text-align: center;}
+        .checkbox{display: block; position: relative;}
+.tabs {
+    max-width: 90%;
+    float: none;
+    list-style: none;
+    padding: 0; border: 0;
+    margin: 0;
+}
+ 
+.tabs:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+ 
+.tabs input[type=radio] {
+    display:none;
+}
+ 
+.tabs label[class=fa] {
+    display: block;
+    float: left;
+    width: 33.3333%;
+    color: #ccc;
+    font-size: 15px;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: inset 0 0px #ccc;
+    border-bottom: 4px solid #ccc;
+ 
+    -webkit-transition: all 0.5s; /* Safari 3.1 to 6.0 */
+    transition: all 0.5s;
+}
+@media (min-width: 768px) {   
+    .tabs i {
+        padding: 1px;
+        margin-right: 5px;
+    }
+ 
+    .tabs label span {
+        display: inherit;
+    }
+ 
+    .tabs {
+   max-width: 750px;
+   margin: 0px;
+    }
+}
+  
+.tabs label span {
+    color: black;
+}
+ 
+.tabs label i {
+    padding: 0px;
+    line-height: 1;
+    margin-right: 0;
+    border-bottom: 4px solid #3498db;
+}
+ 
+.tabs label:hover {
+    color: #3498db;
+    border-bottom: 4px solid #3498db;
+    line-height: 1;
+}
+     
+.tab-content {
+    display: none;
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+    padding: 2px;
+    box-sizing: border-box;
+    background-color:white;
+}
+.tab-content * {
+ 
+    -webkit-animation: scale 0.7s ease-in-out;
+    -moz-animation: scale 0.7s ease-in-out;
+    animation: scale 0.7s ease-in-out;
+}
+ 
+@keyframes scale {
+ 
+  0% { 
+    transform: scale(0.9);
+    opacity: 0;
+    }
+ 
+  50% {
+    transform: scale(1.01);
+    opacity: 0.5;
+    }
+ 
+  100% { 
+    transform: scale(1);
+    opacity: 1;
+  }
+ 
+}
+.tabs [id^="tab"]:checked + label {
+    background: white;
+    box-shadow: inset 0 4px #3498db;
+    border-bottom: 4px solid #3498db;
+    color: #3498db;
+}
+ 
+#tab1:checked ~ #tab-content1,
+#tab2:checked ~ #tab-content2 {
+    display: block;
+}
+    </style>
 
     <script>
       $(document).ready(function(){
         $('.modal-footer button').click(function(){
 		    var button = $(this);
-
 		    if ( button.attr("data-dismiss") != "modal" ){
 			    var inputs = $('form input');
 			    var title = $('.modal-title');
 			    var progress = $('.progress');
 			    var progressBar = $('.progress-bar');
-
 			    inputs.attr("disabled", "disabled");
-
 			    button.hide();
-
 			    progress.show();
-
 			    progressBar.animate({width : "100%"}, 100);
-
 			    progress.delay(1000)
 					    .fadeOut(600);
-
 			    button.text("Close")
 					    .removeClass("btn-primary")
 					    .addClass("btn-success")
@@ -278,22 +419,13 @@
 		    var title = $('.modal-title');
 		    var progressBar = $('.progress-bar');
 		    var button = $('.modal-footer button');
-
 		    inputs.removeAttr("disabled");
-
-		    title.text("Log in");
-
 		    progressBar.css({ "width" : "0%" });
-
 		    button.removeClass("btn-success")
 				    .addClass("btn-primary")
-				    .text("Sing In")
 				    .removeAttr("data-dismiss");
-                
 	    });
     });
-    
-
     </script>
 
     <footer>

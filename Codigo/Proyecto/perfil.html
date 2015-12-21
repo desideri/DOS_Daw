@@ -25,37 +25,145 @@
     <div><h1 id="marquesina"><span>Diagrams</span><br><span>Done Right</span></h1></div>
 </header>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#"><img src="img/logo1.png" class="img-circle" alt="Cinque Terre" width="30" height="30"></a>
-    </div>
-    <div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li><a href="index.html" target="_top" class="ui-linked">Home</a></li>
-        </ul>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="#"><img src="img/logo1.png" class="img-circle" alt="ICO-BRAND" width="30" height="30"></a>
+        </div>
+        <div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html#section1" target="_blank">What's New?</a></li>
+              <li><a href="index.html#section2" target="_blank">Features</a></li>
+              <li><a href="index.html#section3" target="_blank">Examples</a></li>
+              <li><a href="index.html#section4" target="_blank">About us</a></li>
+            </ul>
         <ul class="nav navbar-nav navbar-right">
         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>   Joyce Sarmiento<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">option 1</a></li>
-            <li><a href="#">option 2</a></li>
             <li><a href="index.html" target="_top">log out</a></li>
           </ul>
         </li>
-            
       </ul>
-
-      </div>
     </div>
-  </div>
-</nav>    
-<br>
+</div></div>
+</nav>
+<style>
+  body {
+    position: relative;
+    overflow-y: auto;
+}
+    
+    .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+    text-shadow: 0 0px 0;}
+    
+
+header{
+    position: relative;
+    padding-top:50px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+}
+#marquesina{
+   text-align: center;
+   color: #fff;
+   font-family: Avenir,Helvetica,Arial,sans-serif;
+   font-weight: 100;
+   font-size: 34px;
+}
+
+footer{
+       padding-top:50px;
+       text-align: center;
+       background: #333;
+       border-top: 1px solid #666;
+       color: #999;
+}
+
+
+/*Thumbs*/
+.src-image {
+  display: none;
+}
+
+.card {
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #CCC;
+  border-radius: 8px;
+  text-align: center;
+  padding: 0;
+  background-color: #777;
+  color: rgb(247,247,247);
+}
+
+.card .header-bg {
+  /* This stretches the canvas across the entire hero unit */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px #FFF solid;
+  /* This positions the canvas under the text */
+  z-index: 1;
+}
+.card .avatar {
+  position: relative;
+  margin-top: 15px;
+  z-index: 100;
+}
+
+.card .avatar img {
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 5px solid rgba(0,0,30,0.8);
+}
+
+.thumb-f{
+    padding-top:50px;
+    padding-left:200px;
+    text-align: center;
+}
+/*Features*/
+.think-draw-collaborate {
+    background: url(icons.png) 50% 50px transparent no-repeat;
+    height:240px;
+    padding-top: 50px;
+}
+
+.tdc-wrapper {
+    background-color: #f7f7f7;
+    padding-bottom: 40px;
+}
+.think-draw-collaborate h2 {
+    margin-top: 170px;
+    margin-bottom: 10px;
+    padding-right: 20px;
+}
+.think-draw-collaborate p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #777777;
+    padding: 0 20px;
+    text-align: left;
+}
+.span4 {
+    width: 300px;
+    float: left;
+}   
+     
+</style>         
 <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-12 text-left"> 
@@ -125,8 +233,10 @@
 								<div class="caption">
 									<h4>ER-Bases II</h4>
 									<p>Shared With:<br>+ Angely Oyola</p>
-									<a class="btn btn-mini" href="workarea.html" target="_top">» Edit</a>
-								</div>
+                                    
+                                <a href="workarea.html" target="_top" >
+          <span class="glyphicon glyphicon-pencil"></span></a>
+								
                             </div>
                         </li>
                         <li class="col-sm-3">
@@ -137,7 +247,8 @@
 								<div class="caption">
 									<h4>Diagrama1</h4>
 									<p>Shared With:<br>+ Kattya Desiderio</p>
-									<a class="btn btn-mini" href="#">» Edit</a>
+                                    <a href="workarea.html" target="_top" >
+          <span class="glyphicon glyphicon-pencil"></span></a>
 								</div>
                             </div>
                         </li>
@@ -149,7 +260,8 @@
 								<div class="caption">
 									<h4>Diag ER</h4>
 									<p>Shared With:<br>+ Stephy Quimba <br>+ Sianna Puente</p>
-									<a class="btn btn-mini" href="#">» Edit</a>
+									<a href="workarea.html" target="_top" >
+          <span class="glyphicon glyphicon-pencil"></span></a>
 								</div>
                             </div>
                         </li>
@@ -161,7 +273,8 @@
 								<div class="caption">
 									<h4>Components</h4>
 									<p>Shared With:<br>+ Angely Oyola <br>+ Sianna Puente</p>
-									<a class="btn btn-mini" href="#">» Edit</a>
+									<a href="workarea.html" target="_top" >
+          <span class="glyphicon glyphicon-pencil"></span></a>
 								</div>
                             </div>
                         </li>
@@ -177,7 +290,8 @@
 								<div class="caption">
 									<h4>Components</h4>
 									<p>Shared With:<br>+ Angely Oyola <br>+ Sianna Puente</p>
-									<a class="btn btn-mini" href="#">» Edit</a>
+									<a href="workarea.html" target="_top" >
+          <span class="glyphicon glyphicon-pencil"></span></a>
 								</div>
                             </div>
                         </li>
@@ -189,7 +303,8 @@
 								<div class="caption">
 									<h4>Components</h4>
 									<p>Shared With:<br>+ Angely Oyola <br>+ Sianna Puente</p>
-									<a class="btn btn-mini" href="#">» Edit</a>
+									<a href="workarea.html" target="_top" >
+          <span class="glyphicon glyphicon-pencil"></span></a>
 								</div>
                             </div>
                         </li>
@@ -201,7 +316,8 @@
 								<div class="caption">
 									<h4>Components</h4>
 									<p>Shared With:<br>+ Angely Oyola <br>+ Sianna Puente</p>
-									<a class="btn btn-mini" href="#">» Edit</a>
+									<a href="workarea.html" target="_top" >
+          <span class="glyphicon glyphicon-pencil"></span></a>
 								</div>
                             </div>
                         </li>
@@ -213,7 +329,8 @@
 								<div class="caption">
 									<h4>Components</h4>
 									<p>Shared With:<br>+ Angely Oyola <br>+ Sianna Puente</p>
-									<a class="btn btn-mini" href="#">» Edit</a>
+									<a href="workarea.html" target="_top" >
+          <span class="glyphicon glyphicon-pencil"></span></a>
 								</div>
                             </div>
                         </li>
@@ -310,9 +427,10 @@
                           </div>                          
                         </div>
                       </div>                   
-                    <div data-role="main" class="ui-content">
-                        <a href="workArea.html" target="_top"  class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left" style="none">Create Diagram</a>
-                    </div>
+                                                    <div data-role="main" class="ui-content">
+                                <a href="workarea.html" target="_top" class="btn btn-info btn-lg">
+          <span class="glyphicon glyphicon-plus"></span></a>
+                        </div>
                         
                         
                     </div>
