@@ -587,7 +587,10 @@ footer{
 .modal-footer {
     height: 70px;
     margin: 0;
+<<<<<<< HEAD
     text-align: center;
+=======
+>>>>>>> origin/master
 }
 .modal-footer .btn {
     font-weight: bold;
@@ -669,6 +672,7 @@ footer{
   background-color: #466b99;
   border-color: #3b5a7c;
 }
+<<<<<<< HEAD
 
 .icon-bar.vertical.label-right > * {
     text-align: left; }
@@ -916,3 +920,5 @@ footer{
 
 
 
+=======
+>>>>>>> origin/master
