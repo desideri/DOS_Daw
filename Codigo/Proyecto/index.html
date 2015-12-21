@@ -15,6 +15,38 @@
 
 
 </head>
+<<<<<<< HEAD
+=======
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<header>
+    <div><h1 id="marquesina"><span>Diagrams</span><br><span>Done Right</span></h1></div>
+</header>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#"><img src="img/logo1.png" class="img-circle" alt="ICO-BRAND" width="30" height="30"></a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#section1">What's New?</a></li>
+          <li><a href="#section2">Features</a></li>
+          <li><a href="#section3">Examples</a></li>
+          <li><a href="#section4">About us</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+        <li><a id="btnSignIN" href="#"><span class="glyphicon glyphicon-user"></span> Sign In</a></li>
+        <li><a href="perfil.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+>>>>>>> origin/master
 
   <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
@@ -239,6 +271,7 @@
       </div>
     </div>
 
+<<<<<<< HEAD
     <script>
       $(document).ready(function(){
         $('.modal-footer button').click(function(){
@@ -313,4 +346,103 @@
     </footer>
     
     </body>
+=======
+</footer>
+    
+
+<div class="modal fade" id="ejemMod" role="dialog">
+    <div class="modal-dialog modal-lg" >
+      <!-- Modal content-->
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">    
+            <script src="js/popup_register_login.js"></script>
+            <div id="popup-register" class="popup_active" style="height: 409px;" overflow-y="auto">
+            <div class="overlay-filter" style="z-index: 2;"></div>
+            <div class="popup-wrapper popup-wrapper-left deactive">
+                
+                <div class="popup-left-container">
+                    <h4>Sign in using...            </h4>
+                    <!--social buttons-->
+                    <div class="popup-buttons-wrapper">
+                        <a class="popup-buttons fb" href="#">Facebook</a>
+                        <a class="popup-buttons gp" href="#">Google Plus</a>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="popup-divider">
+                        <span></span>
+                        <p>
+                            or
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#" class="popup-link-change active">
+                            New user                </a>
+                        <a href="#" class="popup-link-change">
+                            Existing user                </a>
+                    </div>            
+                    <form id="form-popup-register" action="#" method="GET">
+                        <label>
+                            <span class="glyphicon glyphicon-user"></span>
+                            <input type="text" name="name" placeholder="Name" required="">
+                            <div class="error-message" rel="name"></div>                         
+                        </label>
+                        <label>
+                            <span class="glyphicon glyphicon-envelope"></span>
+                            <input type="email" name="email" placeholder="Email" required="">
+                            <div class="error-message" rel="email"></div>
+                        </label>
+                        <button type="submit" class="btn btn-primary btn-block">Register for Free</button>                    
+                    </form>
+                </div>
+            </div>
+
+            <div class="popup-wrapper popup-wrapper-right deactive">
+                <div class="text-right">
+                    <a class="popup-close" href="#"></a>
+                </div>
+                <div class="popup-container">
+                    <h4>Login using...</h4>
+                    <div class="popup-buttons-wrapper">
+                        <a class="popup-buttons fb" href="#">Facebook</a>
+                        <a class="popup-buttons gp" href="#">Google Plus</a>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="popup-divider">
+                        <span></span>
+                        <p>
+                            or
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#" class="popup-link-change">New user</a>
+                        <a href="#" class="popup-link-change active">Existing user</a>
+                    </div>            
+                    <form id="form-popup-login" action="#" method="POST">
+                        <label>
+                            <span class="glyphicon glyphicon-envelope"></span>
+                            <input type="email" name="email" placeholder="Email">
+                            <div class="error-message" rel="email"></div>
+                        </label>
+                        <label>
+                            <span><img src="img/lock16.png" alt="password" /></span>
+                            <input type="password" name="passwd" placeholder="Password">
+                            <div class="error-message" rel="passwd"></div>
+                        </label>
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    </form>
+
+                    <div class="popup-link">
+                        <p>
+                            <a href="#" class="open-forgot">Forgot my password</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </div>
+</body>
+>>>>>>> origin/master
 </html>

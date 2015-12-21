@@ -111,9 +111,12 @@ a {  cursor:pointer;}
     margin: 10px 10px 15px 10px;
     
 }
+<<<<<<< HEAD
 #shareDocs {
     width: auto;
 }
+=======
+>>>>>>> origin/master
 #UserDocs{
     width: 910px;
 }
