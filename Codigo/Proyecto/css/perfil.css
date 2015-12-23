@@ -1,12 +1,27 @@
-.btn.btn-info.btn-lg{
+.jumbotron.backGround{
+    margin-top: 5px;
+    background-color: #337ab7;
+    color: white;
+    height: auto;
+    
+}
+.panel-title{
+    font-weight: bold;
+}
+#picUser{margin-top: 15px;}
+.btn.btn-info.btn-lg, ui-content{
     float: right;
     position: relative;
     border-radius: 100%;
     margin-right: 5px;
-    
+    display: flex;
+    overflow: hidden;
 }
-.glyphicon.glyphicon-plus{
+.glyphicon.glyphicon-plus, glyphicon-user, glyphicon-file{
     color: white;
+    float: right;
+    position:relative;
+    margin-right: 5px;
 }
 .glyphicon.glyphicon-pencil {
     color: cornflowerblue;
@@ -115,18 +130,9 @@ a {  cursor:pointer;}
     margin: 10px 10px 15px 10px;
     
 }
-<<<<<<< HEAD
 #shareDocs {
     width: auto;
 }
-=======
-<<<<<<< HEAD
-#shareDocs {
-    width: auto;
-}
-=======
->>>>>>> origin/master
->>>>>>> origin/master
 #UserDocs{
     width: 910px;
 }
@@ -248,7 +254,3 @@ li { list-style-type:none;}
 
 ::selection { background: #ff5e99; color: #FFFFFF; text-shadow: 0; }
 ::-moz-selection { background: #ff5e99; color: #FFFFFF; }
-
-
-
-

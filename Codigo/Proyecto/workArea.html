@@ -3,398 +3,258 @@
 <html lang="es">
 
     <head>
-        <meta charset=â€œutf-8â€ />
+        <meta charset="utf-8">
         <meta name="description" content="Ejemplo de HTML5" />
         <meta name="keywords" content="HTML5, CSS3, Javascript" />
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		
-		
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		
-		<link href="css/angely.css" rel="stylesheet">
-		<script type= "text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
-		<script type= "text/javascript" src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
-		
+        <link rel="stylesheet" href="css/w2.css">
+        <link rel="stylesheet" href="css/principal.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+           
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
         <title>Diagramas ER</title>
-		
-		<script src="js/bootstrap.min.js"></script>	
-
-		<script type= "text/javascript">
-
-      $(document).on('ready', function () {
-	  
-	    var template = 0;
-          $('.Paleta').draggable({
-              helper: 'clone'
-			  
-          });
-
-
-         $('#carrito').droppable({
-              accept: '.Paleta',
-              drop: eventoDrop
-          }); 
-
-          function eventoDrop(evento, ui) {
-		  var on =0;
-              var draggable = ui.draggable.clone();  
-			  draggable.on('dblclick', function(){
-				$(this).remove();
-				});
-				
-			
-			draggable.on('mouseover', function(){
-				 $(this).css("background-color", "red");
-				 $(this).on('click', function(){
-				 
-					 $(this).draggable(); 
-				 });
-					
-			});
-			
-			draggable.on('mouseleave', function(){
-					$(this).css("background-color","white");
-			});
-		
-		$(this).append(draggable);
-		  }
-
-
-          /*SVG*/
-          $("#btnCargar").click(function () {
-              $.get($("#cargarArchivo").val(), function (d) {
-                  var svg, objeto, img;
-
-                  objeto = $("<object></object>");
-                  objeto.attr("type", "image/svg+xml");
-                  objeto.attr("data", "dg.svg");
-                  
-
-                  img = $("<img></img>");
-                  img.attr("src", "w.png");
-                  img.attr("alt", "h");
-
-                  objeto.append(img);
-                  $("#carrito").append(objeto);
-
-              });
-          });
-      });
-		</script>
-		
-		<style >
-            
-			
-			.redes{
-				
-				margin-top: 10px;
-			
-			}
-			
-			
-			#carrito{
-				width: 100vw;
-				height: 100vh;
-				margin-top: 80px;
-				margin-left: 60px;
-				.position : absolute;
-				background-color:#fff;
-				clear:  both;
-			}
-			
-			
-			
-			
-			.Paleta{
-				display: inline-block;
-				background-color:#D8D8D8;
-				clear:  both;
-			}
-			
-		
-			
-			#myCarousel{
-				width: 170px;
-				height: 170px;
-				float: right;
-				margin-top: 20px;
-			}
-			.carousel-inner > .item > img,
-		  .carousel-inner > .item > a > img {
-			  width: 70%;
-			  margin: auto;
-
-			
-			
-			
-			
-		</style>
-            
     </head>
 
     <body>
-        
-		<div class="container">
-		
+
 		<!--BARRA DE MENÚ -->
-		
-			<nav class="navbar navbar-default navbar-fixed-top">
-			  <div class="container">
-				<div class="navbar-header logo">
-				  <img src="Resources/mainLogo.jpg" width="50" height="50">
-				</div>
-				<div id="navbar" class="navbar-collapse collapse">
-				  <ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#">New</a></li>
-					<li><a href="#myModal" data-toggle="modal" data-target="#myModal">Open</a></li>
-					<li><a href="#">Save</a></li>
-					<li><a href="#">Undo</a></li>
-					<li><a href="#">Redo</a></li>				
-				  </ul>
-				   
-				  <div class="container">
-				  
-					 
-				<ul class="nav navbar-nav navbar-right">
-					<img src="Resources/femaleAvatar.jpg" width="50" height="50" alt=".." >
-					<li class="dropdown">
-					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Angely Oyola 
-                      <span class="caret"></span></a>
-					  <ul class="dropdown-menu">
-						<li><a href="#">Perfil</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="#">Diagramas Compartidos</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="#">Sign Out</a></li>
-					  </ul>
-					</li>
-				  </ul>
-
-				<ul class="redes">
-					
-					<a class="btn btn-danger" href="#">Go to Chat</a>
-					<a class="btn btn-warning" href="#">Share It</a>
-
-					<img class="img-rounded" src="Resources/rs1.jpg" width="30px" height="30px" alt=".." ></img>
-					<img class="img-rounded" src="Resources/rs2.jpg" width="30px" height="30px" alt=".." ></img>
-					<img class="img-rounded" src="Resources/rs3.jpg" width="30px" height="30px" alt=".." ></img>
-					<img class="img-rounded" src="Resources/rs4.jpg" width="30px" height="30px" alt=".." ></img>
-
-				</ul>
-
-				</div><!--/.nav-collapse -->
-			  </div>
-			</nav>
-			
-			
-			<!--+AREA CENTRAL -->
-			
-			<div class="main">
-				
-			    	    <div class = "row">					 
-							    <div id= "tabs" class="floating col-sm-1 col-md-9 ">
-								      <ul class="nav nav-tabs">
-									    <li class="active"><a  data-toggle="tab" href="#carrito">Tab1</a></li>
-									    <li><a  data-toggle="tab" href="#area2">Tab 2</a></li>
-                                    
-								      </ul>
-							    </div>																
-							    <div class=" col-sm-1 col-md-2 sidebar">
-								
-									    <h2 align="center">UML 1.0 </h2>
-									
-									
-									
-							    <div class="Paleta">
-									    <svg contentScriptType="text/ecmascript" contentStyleType="text/css" height="182.0px"
-                                              preserveAspectRatio="xMidYMid meet" version="1.0" width="172.0px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://                                                www.w3.org/1999/xlink" zoomAndPan="magnify">
-									     <!--A UML Object --> <!-- Change the translate(x y) to move this -->
-									      <g class="uml.object " transform="translate(11.0 11.0)">
-										    <rect fill="#fcfcfc" height="160" stroke="#000000" stroke-dasharray="none" stroke-width="2" width="150" x="0" y="0"></rect>
-										    <line fill="#fcfcfc" stroke="#000000" stroke-dasharray="none" stroke-width="2" x1="0" x2="150" y1="30" y2="30"></line>
-										    <!-- Change the text 'Object' to the name of your package -->
-										    <text font-family="Lucida Grande" font-size="11" text-anchor="middle" x="75" y="20">Object</text>
-									      </g>
-									    </svg>
-									    </div>
-									
-									
-										    <div class="Paleta">
-										    <svg contentScriptType="text/ecmascript" contentStyleType="text/css" height="37" preserveAspectRatio="xMidYMid meet" version="1.0" width="160px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify">
-											    <!-- The reverse marker, use for marker-start --> 
-										      <marker fill="none" id="beermat.marker.depends.reverse" markerUnits="strokeWidth" orient="auto" overflow="visible" preserveAspectRatio="xMidYMid meet" stroke="black">
-											    <path d="m-6 -5 6 5 -6 5" transform="scale(0.7) rotate(180)"></path>
-										      </marker>
-										      <marker fill="none" id="beermat.marker.depends" markerUnits="strokeWidth" orient="auto" overflow="visible" preserveAspectRatio="xMidYMid meet" stroke="black">
-											    <path d="m-6 -5 6 5 -6 5" transform="scale(0.7)"></path>
-										      </marker>
-										      <!-- Example use --> 
-											    <line fill="#ffffff" marker-end="url(#beermat.marker.depends)" marker-start="url(#beermat.marker.depends.reverse)" stroke="#000000" stroke-dasharray="none" stroke-width="2" x1="19.0" x2="79.0" y1="18.0" y2="18.0"></line>
-											    <text font-family="Lucida Grande" font-size="11" x="95.0" y="22.0">dependency / extends</text>
-										    </svg>
-									    </div>
-									
-									    <div class="Paleta">
-										    <svg contentScriptType="text/ecmascript" contentStyleType="text/css" height="37px" preserveAspectRatio="xMidYMid meet" version="1.0" width="180px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify">  
-										    <!-- The reverse marker, use for marker-start -->
-										      <marker id="beermat.marker.contain.reverse" markerUnits="strokeWidth" orient="auto" preserveAspectRatio="xMidYMid meet" stroke="black" style="overflow:visible;">
-											    <path d="m5 -5 5 5 -5 5 -5 -5z" transform=" scale(0.7) rotate(180)"></path>
-										      </marker> 
-										      <!-- The marker-->
-										      <marker id="beermat.marker.contain" markerUnits="strokeWidth" orient="auto" preserveAspectRatio="xMidYMid meet" stroke="black" style="overflow:visible;">
-											    <path d="m5 -5 5 5 -5 5 -5 -5z" transform=" scale(0.7)"></path>
-										      </marker>
-										      <!-- Example use -->
-										      <line fill="#ffffff" marker-end="url(#beermat.marker.contain)" marker-start="url(#beermat.marker.contain.reverse)" stroke="#000000" stroke-dasharray="none" stroke-width="2" x1="22.0" x2="69.0" y1="17.0" y2="17.0"></line>
-										      <text font-family="Lucida Grande" font-size="11" x="95.0" y="21.0">Composition</text>
-										    </svg>
-									    </div>
-									    <div class="Paleta">
-										    <svg contentScriptType="text/ecmascript" contentStyleType="text/css" height="37.0px" preserveAspectRatio="xMidYMid meet" version="1.0" width="120px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify">  <!-- The reverse marker, use for marker-start -->
-										      <marker fill="none" id="beermat.marker.inherits.reverse" markerUnits="strokeWidth" orient="auto" overflow="visible" preserveAspectRatio="xMidYMid meet" stroke="black">
-											    <path d="m0 -5 6 5 -6 5z" transform="scale(0.7) rotate(180)"></path>
-										      </marker>
-										      <!-- The marker -->
-										      <marker fill="none" id="beermat.marker.inherits" markerUnits="strokeWidth" orient="auto" overflow="visible" preserveAspectRatio="xMidYMid meet" stroke="black">
-											    <path d="m0 -5 6 5 -6 5z" transform="scale(0.7)"></path>
-										      </marker>
-										      <!-- Example use -->
-										      <line fill="#ffffff" marker-end="url(#beermat.marker.inherits)" marker-start="url(#beermat.marker.inherits.reverse)" stroke="#000000" stroke-dasharray="none" stroke-width="2" x1="17.0" x2="94.0" y1="17.0" y2="17.0"></line>
-										      <text font-family="Lucida Grande" font-size="11" x="118.0" y="22.0">Inheritance</text>
-										    </svg>
-									    </div>
-									    <div class="Paleta">
-										    <svg contentScriptType="text/ecmascript" contentStyleType="text/css" height="37px" preserveAspectRatio="xMidYMid meet" version="1.0" width="120px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify">
-
-											    <!-- The reverse marker, use for marker-start --> 
-										      <marker fill="none" id="beermat.marker.circleHollow.reverse" markerUnits="strokeWidth" orient="auto" overflow="visible" preserveAspectRatio="xMidYMid meet" stroke="black">
-											    <circle cx="4" cy="0" r="4" transform="scale(0.7) rotate(180)"></circle>
-										      </marker>
-										      <!-- The marker -->
-										      <marker fill="none" id="beermat.marker.circleHollow" markerUnits="strokeWidth" orient="auto" overflow="visible" preserveAspectRatio="xMidYMid meet" stroke="black">
-											    <circle cx="4" cy="0" r="4" transform="scale(0.7)"></circle>
-										      </marker>
-										     <!-- Example use --> 
-										      <line fill="#ffffff" marker-end="url(#beermat.marker.circleHollow)" marker-start="url(#beermat.marker.circleHollow.reverse)" stroke="#000000" stroke-dasharray="none" stroke-width="2" x1="22.0" x2="75.0" y1="16.0" y2="16.0"></line>
-										      <text font-family="Lucida Grande" font-size="11" x="101.0" y="20.0">Interface</text>
-										    </svg>
-									    </div>
-									    <div class="Paleta">
-										    <svg contentScriptType="text/ecmascript" contentStyleType="text/css" height="37px" preserveAspectRatio="xMidYMid meet" version="1.0" width="140px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify">
-										    <!-- The reverse marker, use for marker-start --> 
-										    <marker fill="none" id="beermat.marker.agg.reverse" markerUnits="strokeWidth" orient="auto" overflow="visible" preserveAspectRatio="xMidYMid meet" refX="0" refY="0" stroke="black">
-											    <path d="m5 -5 5 5 -5 5 -5 -5z" transform="scale(0.7) rotate(180)"></path>
-										    </marker>
-										    <!-- The marker -->
-										    <marker fill="none" id="beermat.marker.agg" markerUnits="strokeWidth" orient="auto" overflow="visible" preserveAspectRatio="xMidYMid meet" refX="0" refY="0" stroke="black">
-											    <path d="m5 -5 5 5 -5 5 -5 -5z" transform="scale(0.7)"></path>
-										    </marker>
-
-										    <!-- Example use -->
-										    <line fill="#ffffff" marker-end="url(#beermat.marker.agg)" marker-start="url(#beermat.marker.agg.reverse)" stroke="#000000" stroke-dasharray="none" stroke-width="2" x1="24.0" x2="71.0" y1="16.0" y2="16.0"></line>
-
-										    <text font-family="Lucida Grande" font-size="11" x="98.0" y="21.0">Aggregation</text>
-										    </svg>
-									    </div>
-									    <div class="Paleta">
-										    <svg contentScriptType="text/ecmascript" contentStyleType="text/css" height="37px" preserveAspectRatio="xMidYMid meet" version="1.0" width="180px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify">
-
-										    <!-- The reverse marker, use for marker-start --> 
-										    <marker fill="black" id="beermat.marker.sync.reverse" markerUnits="strokeWidth" orient="auto" overflow="visible" preserveAspectRatio="xMidYMid meet" stroke="black">
-											    <path d="m0 -4 8 4 -8 4z" transform="scale(0.7) rotate(180)"></path>
-										    </marker>
-										
-										    <!-- The marker -->
-										    <marker fill="black" id="beermat.marker.sync" markerUnits="strokeWidth" orient="auto" overflow="visible" preserveAspectRatio="xMidYMid meet" stroke="black">
-											    <path d="m0 -4 8 4 -8 4z" transform="scale(0.7)"></path>
-										    </marker>
-										    <!-- Example use -->   
-										    <line fill="#ffffff" marker-end="url(#beermat.marker.sync)" marker-start="url(#beermat.marker.sync.reverse)" stroke="#000000" stroke-dasharray="none" stroke-width="2" x1="23.0" x2="74.0" y1="17.0" y2="17.0"></line>
-										    <text font-family="Lucida Grande" font-size="11" x="96.0" y="20.0">Synchronous Message</text>
-									    </svg>
-									    </div>
-									
-									    <div class="Paleta">
-										    <svg contentScriptType="text/ecmascript" contentStyleType="text/css" height="102.0px" preserveAspectRatio="xMidYMid meet" version="1.0" width="182.0px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify">
-  
-									      <!--A UML Component --><!-- Change the translate to the required x,y position -->
-									      <g class="uml.component" transform="translate(33.0 10.0)">
-										    <rect fill="#fcfcfc" height="80" stroke="#000000" stroke-width="2" width="135" x="0" y="0"></rect>
-										    <rect fill="#fcfcfc" height="20" stroke="#000000" stroke-width="2" width="50" x="-25" y="10"></rect>
-										    <rect fill="#fcfcfc" height="20" stroke="#000000" stroke-width="2" width="50" x="-25" y="50"></rect>
-										    <!-- Change the text 'Component' to the name of your package -->
-										    <text font-family="Lucida Grande" font-size="11" text-anchor="middle" x="70" y="42">Component</text>
-									      </g>
-									  
-									    </svg>
-
-									    </div>
-									    <div class="Paleta">
-										    <svg contentScriptType="text/ecmascript" contentStyleType="text/css" height="141.0px" preserveAspectRatio="xMidYMid meet" version="1.0" width="191.0px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify"> 
-										     <!--A UML Package --> <!-- Change the translate(x y) to move this -->
-										      <g class="uml.package" transform="translate(9.0 7.0)">
-											    <rect fill="#fcfcfc" height="18" stroke="#000000" stroke-dasharray="none" stroke-width="2" width="48" x="0" y="0"></rect>
-											    <rect fill="#fcfcfc" height="102" stroke="#000000" stroke-dasharray="none" stroke-width="2" width="170" x="0" y="18"></rect>
-											    <!-- Change the text 'Package' to the name of your package -->
-											    <text font-family="Lucida Grande" font-size="11" text-anchor="middle" x="80" y="70.0">Package</text>
-										      </g>
-										    </svg>
-									    </div>
-								
-									    <div class="Paleta">
-										    <svg contentScriptType="text/ecmascript" contentStyleType="text/css" height="127.0px" preserveAspectRatio="xMidYMid meet" version="1.0" width="62" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify">
-										    <!--A UML Actor, as split elements -->
-										      <g class="uml.actor" transform="translate(10 10)">
-											    <circle cx="20" cy="20" fill="#fcfcfc" r="20" stroke="#000000" stroke-dasharray="none" stroke-width="2"></circle>
-											    <line fill="#fcfcfc" stroke="#000000" stroke-dasharray="none" stroke-width="2" x1="20" x2="20" y1="40" y2="75"></line>
-											    <line fill="#fcfcfc" stroke="#000000" stroke-dasharray="none" stroke-width="2" x1="20" x2="0" y1="75" y2="105.0"></line>
-											    <line fill="#fcfcfc" stroke="#000000" stroke-dasharray="none" stroke-width="2" x1="20" x2="40" y1="75" y2="105.0"></line>
-											    <line fill="#fcfcfc" stroke="#000000" stroke-dasharray="none" stroke-width="2" x1="2" x2="38" y1="60.0" y2="60.0"></line>
-										      </g> 
-										    <!--A UML Actor, as a single path -->
-										    <!--Change stroke and fill to a valid colour when using" -->
-										    <path fill="none" stroke="none" stroke-dasharray="none" stroke-width="2" d="M40 20 C40 31.0457 31.0457 40 20 40 C8.9543 40 0 31.0457 0 20 C0 8.9543 8.9543 0 20 0 C31.0457 0 40 8.9543 40 20 ZM20 40 L20 75M20 75 L0 105M20 75 L40 105M2 60 L38 60"></path>
-									    </svg>
-									    </div>
-								
-									
-						
-							    </div >		
-							
-							    <div id= "carrito" align="center">
-							    </div>	
-
-					     </div>	
-	
-			</div >
-
-
-            <div class="modal fade" id="myModal">
-	        <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Cargar Archivo</h4>
-                </div>
-                <div class="modal-body">
-                  <div class="form-group">
-    		        <label for="cargarArchivo">Cargar Archivo : </label>
-                    <input class="form-control" id="cargarArchivo" placeholder="Ruta del Archivo" type="file">  <!--FALTA Bootstrap File Input -->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>                        
+              </button>
+              <a class="navbar-brand" href="#"><img src="img/logo1.png" class="img-circle" alt="Cinque Terre" width="30" height="30"></a>
+            </div>
+            <div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                
+                  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Home<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">About Us</a></li>
+                   
+                    
+                  </ul>
+                </li>
+                   <li><a href="#">New</a></li>
+                   <li><a href="#">Open</a></li>
+                   <li><a href="#">Save</a></li>
+                   <li><a href="#">Undo</a></li>
+                   <li><a href="#">Redo</a></li>
+                   <li><a href="#">Share</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>   Joyce Sarmiento<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="index.html" target="_top">log out</a></li>
+                  </ul>
+                </li>
             
-  		          </div>
-                </div>
-                <div class="modal-footer">
-                 <button type="button" class="btn btn-info btn-lg" data-dismiss="modal" id="btnCargar" >Subir</button>
-        
-                </div>
+              </ul>
+
               </div>
+            </div>
+          </div>
+</nav>    
+
+		<!--+AREA CENTRAL -->
+        <br> <br> 
+
+  <div class="container-fluid text-center">    
+      <div class="row content">
+
+        <div class="col-sm-2 sidenav">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Tablas
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                      <div class="list-group">
+
+                          <a href="#" class="list-group-item"> 
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="163px" height="113px" version="1.1" content="%3Cmxfile%20type%3D%22device%22%20userAgent%3D%22Mozilla%2F5.0%20      (Windows%20NT%206.2%3B%20WOW64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F47.0.2526.106%20Safari%2F537.36%22%20version%3D%225.2.7.0%22%20editor%3D%22www.draw.io%22%3E%3Cdiagram%3E7Vbfb5swEP5reJ0Ah7R7hf7YQyZNZdKeXTBg1fiQcUbSv75ncy5BWbZVU%2FfUBCm%2Bz3e%2Bu%2B87J4lY0R%2FuDR%2B6r1ALFaVxfYjYTZSmyYbF%2BOGQ44xcbQlojazJaQFK%2BSwIDG57WYtx5WgBlJXDGqxAa1HZFcaNgWnt1oBaZx14GzIuQFlxdY7%2BkLXtZvQ63S74FyHbLmROtp%2FnnUdePbUG9pryRSlr%2FGve7nk4yzfKbpFEA4DHuFV%2FKIRyRAaOZjbuLuy%2BFmmEpkJ%2BH4BbLuAnV3vq8zt%2FxJY9Otpj6H6cZK%2B4RivvbK8QTHDZgLYlOcVoV51U9Y4fYe%2BSjxY7D1begZHP6M9DMG4bSzoji3iaVKoABcanZCJ271Vk6U6kXEaMGPstdOpOnKEdHx3g6wGl%2BDBK19Hs0nPTSp2DtdCTU2jtbp2eNGI5MSSMFWGYz1n2EFF8L6AX1hzRhQLSMPw0%2B8mG7GmZpCTch241RQRymt729exFVFyQrr%2FWmJ1p%2FAATAtTGicrYoZdqUXi0Bp5EoEWDn4BToQgaB15J3e5E4yrfLMgDNeOgqZNWlIi7dBN%2BTSAGSGyjsB5208m6FtrpCJZbP4azQgNIbT0BWY4PUlLEn7Iow5ILtLGPYOPj3I0tQGPpHOMwTOBETMJNxd%2BJ6S%2FFuZgkXrjxf9Iu%2BP2LdJsL0tG1%2FZDubdJlxNv%2FkC67IB3dxg%2Fp3ibd1fW7SYfm8oPr907%2BwrDbFw%3D%3D%3C%2Fdiagram%3E%3C%2Fmxfile%3E" style="background-color: rgb(255, 255, 255);"><defs/><g transform="translate(0.5,0.5)"><rect x="1" y="1" width="160" height="110" fill="#ffffff" stroke="#000000" pointer-events="none"/><path d="M 1 27 L 1 1 L 161 1 L 161 27 Z" fill="#e0e0e0" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><g transform="translate(66,9)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="31" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Table</div></div></foreignObject><text x="16" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text></switch></g></g></svg>
+                          </a>
+                          <a href="#" class="list-group-item">
+                              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="163px" height="113px" version="1.1" content="%3Cmxfile%20type%3D%22device%22%20userAgent%3D%22Mozilla%2F5.0%20(Windows%20NT%206.2%3B%20WOW64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F47.0.2526.106%20Safari%2F537.36%22%20version%3D%225.2.7.0%22%20editor%3D%22www.draw.io%22%3E%3Cdiagram%3E7Zbfb5swEMf%2FGl4ngpO0e4X%2B2EMmTeVhzy4YsGp8yFxG07%2B%2BZziHsDRTq2l7aoQU%2FPWd78fnIIlE1j7fO9k136FUJkri8jkSN1GSrNYipi%2BvHCblastC7XTJRrOQ6xfFYjDb61L1C0MEMKi7pViAtarAhSadg2FpVoFZRu1kHSLOQl5Ic67%2B1CU2k3qdbGf9m9J1EyKvtl%2BnnUdZPNUO9pbjRYmoxs%2B03cpw1liouKUmOgA6xt%2B1z5kyvpGhR1M37i7sHpN0ynIif3agLe%2FwS5o915lT8zTYSe%2FxEOrvB90aaWmVNtgaEld0W4HFnI1iWheNNuVOHmDvw%2FdItYdV2oDTL2QvgzNtO2TSvvS00sZkYMCRYGGKdXTK%2FWEcxqme3H6EMv1hk7STvRfGVMAY2fX6cUzOm7TS1dqmgAgtG4Wq7k4iz4BEyu1RDlWY5PMWjxL3915Bq9AdyIQdRMwTzIMfkMTDPEarNWvNYoRYlDy69fHsmSjdMNS3AYszwA8wkMBlnACmCkdKM9weHTyp34C8wajvZKFtvVOVz3w9Kw9cjJeGRqPKSffhBnpHkAbU2MpQPuKm0WWprOcIKFFO0DyhDrTFsQGblC5qSRZ%2F2UQbSjmjNdUR1nR5c4cZWEpdkh%2B5KZqIQfmpeB%2FM8Yk4h3mE9z524bXwN%2BjWF9BxCp%2FoPoZuff3%2F0G0uoOOn8RPdx9Bd8aPwD9DRcv61HfdO%2Fr%2BI21c%3D%3C%2Fdiagram%3E%3C%2Fmxfile%3E" style="background-color: rgb(255, 255, 255);"><defs/><g transform="translate(0.5,0.5)"><rect x="1" y="1" width="140" height="110" fill="#ffffff" stroke="#000000" pointer-events="none"/><path d="M 1 23 L 1 1 L 141 1 L 141 23 Z" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><g transform="translate(51,7)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="41" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Section</div></div></foreignObject><text x="21" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text></switch></g></g></svg>
+                          </a>
+                          <a href="#" class="list-group-item">
+                       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="163px" height="147px" version="1.1" content="%3Cmxfile%20type%3D%22device%22%20userAgent%3D%22Mozilla%2F5.0%20(Windows%20NT%206.2%3B%20WOW64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F47.0.2526.106%20Safari%2F537.36%22%20version%3D%225.2.7.0%22%20editor%3D%22www.draw.io%22%3E%3Cdiagram%3E7Vlrb9owFP01fJ2A8Gg%2FLqztpnVSVSrts0tMYs3xzRyzlP76XtvXJFnESge0VcVDwj5%2BXPuecw8CetEsf7jSrMh%2BQMJlb9hPHnrRl95wOBhFfXyzyNoj0wkBqRYJTaqBuXjkBIZpK5HwsjXRAEgjija4AKX4wrQwpjVU7WlLkO2oBUtDxBqYL5jsoj9FYjKPng0nNf6VizQLkQeTcz9yzxa%2FUg0rRfF6w2jpHn44Z2Evd9HoApOoAXAb28ofZlzaRIYc%2BWxcbhndHFJzRQf594IJjtkVf5hc0UXv2D3e2aGlWYfrl5XIJVPYizOTSwQH2FyCMnOa1Mf%2BIhMyuWZrWNnopcGrh16cgRaPOJ%2BFxTisDRGNacTdhJQzkKBdyIj37bO1cm53pFial7j2JlzV7uiha1ZawJ0HpGRFKeyN%2FJSc6VSoGIyBnCaFq122wxNJUUwZ4trwoOZumh1EOb7ikHOj1ziFFgzPScUk%2FkHoV7WUBqEgsqaMRiOSMMk33exds4oNInYLyVGH5JUSv1f8W9LlOWOFbeLdjGDyFkuJqdSOxgYKypjky5BhTWe17fuQVZvohkqYFKnCtl8W20wKLKzPBOciSVyAJv8KnNbKgi2ESq99wGhUQ7cU2EJVJgyfI25PXqH%2FIAYYZimhQiTDABwjxRoMM07e%2FsAFCGVcYscxvjD%2Fs%2F6ncW%2BMiZhhHzkNfXzZ6drMQJVGM1yHyzgqreJWbXGiobhDbfGQjGZpjHdVkS%2FHroxINsFsnlNN8Nq9REPCa4jm5vvectlIxNV1w0i61O%2BqmrZEjqqQ50Rgs0AX2ko3fT5RjI1Bt2XgCrYrgwbvgeKD0z7u0I6fnQjQ8Q9tFX%2Fp4BnS3b4fyycO4QvjHX0h%2BMdeAqE9GgJ5R67gBfIRLcHV5Yst4SCMT7dYwv7EnyzhWJZwRuS8iiWcnSzhLSzB1eXbWAJ9t%2B1YAn3TOFnCO7SEQZ%2Fq9DU8YUr7njzhdT3BFeabeMKUjnlIxk9mcDQzwAvv9gvUAb5UTru%2FMp7M4Phm4CvyxWbwH4xjt%2F7N2o01%2FgWILp4A%3C%2Fdiagram%3E%3C%2Fmxfile%3E" style="background-color: rgb(255, 255, 255);"><defs/><g transform="translate(0.5,0.5)"><rect x="1" y="1" width="160" height="144" fill="#ffffff" stroke="#000000" pointer-events="none"/><path d="M 1 27 L 1 1 L 161 1 L 161 27 Z" fill="#e0e0e0" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><g transform="translate(66,9)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="31" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Table</div></div></foreignObject><text x="16" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text></switch></g><path d="M 161 57 L 1 57" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><g transform="translate(38,36)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="48" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; overflow: hidden; max-height: 24px; max-width: 116px; width: 49px; white-space: normal; font-weight: bold; text-decoration: underline;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">uniqueId</div></div></foreignObject><text x="24" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold" text-decoration="underline">[Not supported by viewer]</text></switch></g><path d="M 31 27 L 31 57" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><g transform="translate(8,36)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="16" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; overflow: hidden; max-height: 24px; max-width: 16px; width: 16px; white-space: normal;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">PK</div></div></foreignObject><text x="8" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text></switch></g><g transform="translate(38,65)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="30" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; overflow: hidden; max-height: 20px; max-width: 116px; width: 31px; white-space: normal;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">row 1</div></div></foreignObject><text x="15" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text></switch></g><path d="M 31 57 L 31 83" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><g transform="translate(38,91)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="30" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; overflow: hidden; max-height: 20px; max-width: 116px; width: 31px; white-space: normal;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">row 2</div></div></foreignObject><text x="15" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text></switch></g><path d="M 31 83 L 31 109" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><g transform="translate(38,117)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="30" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; overflow: hidden; max-height: 20px; max-width: 116px; width: 31px; white-space: normal;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">row 3</div></div></foreignObject><text x="15" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text></switch></g><path d="M 31 109 L 31 135" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 31 135 L 31 145" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/></g></svg>
+                          </a>
+                      </div>
+                </div>
             </div>
         </div>
 
-       </div>
-		
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Relaciones
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                    <div class="list-group">
+
+                          <a href="#" class="list-group-item"> 
+                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="118px" height="118px" version="1.1" content="%3Cmxfile%20type%3D%22device%22%20userAgent%3D%22Mozilla%2F5.0%20(Windows%20NT%206.2%3B%20WOW64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F47.0.2526.106%20Safari%2F537.36%22%20version%3D%225.2.7.0%22%20editor%3D%22www.draw.io%22%3E%3Cdiagram%3EfVNBc%2FIgEP01uSdgbXtsbfS7ONPRzvRMkzVhSlgHiRp%2FvSQswdTxy0V4%2B3hveawJXzTnlRH7eo0lqISl5TnhHwlj2Yyn7qdHOo88zwmojCyJFIGtvACBgdbKEg4TokVUVu6nYIFaQ2EnmDAGT1PaDtXUdS%2Bq4BiBbSHUPfotS1t79IXNI%2F4PZFUH52z%2B6is%2FovitDLaa%2FBLGd8Pny40IWsNFee5CNIhOpl815wWoPsiQkU9j%2BaA6NmlAUyP%2FP%2FA08yeOQrV0UQ8cbBduDqULgrZOVtpuA0pYiTqPlffaNsoRMrcEXb71ibttvrmAwS9cC%2B3eva8spWvA87xTL%2F%2Bw%2BwGi1leADVjTOcopvkCW0oDUt%2BkH0AydHqcGgkahGgVHj0%2BUzpqlNLYsTC0NLQ%2F7IHHA1hRAp25z%2FiM0HiShUTgIWWEqsHdCbnFz8QgNzxi2cVw8Pf4BeX4F%3C%2Fdiagram%3E%3C%2Fmxfile%3E" style="background-color: rgb(255, 255, 255);"><defs/><g transform="translate(0.5,0.5)"><path d="M 8 108 L 28 108 Q 38 108 41.71 98.72 L 74.29 17.28 Q 78 8 88 8 L 108 8" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><ellipse cx="96" cy="8" rx="3" ry="3" fill="#ffffff" stroke="#000000" pointer-events="none"/><path d="M 108 4 L 100 8 L 108 12" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/></g></svg> 
+                          </a>
+
+                          <a href="#" class="list-group-item"> 
+                           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="118px" height="118px" version="1.1" content="%3Cmxfile%20type%3D%22device%22%20userAgent%3D%22Mozilla%2F5.0%20(Windows%20NT%206.2%3B%20WOW64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F47.0.2526.106%20Safari%2F537.36%22%20version%3D%225.2.7.0%22%20editor%3D%22www.draw.io%22%3E%3Cdiagram%3EfZNBc8IgEIV%2FTe4JqG2P1ab24kxHO9MzTdaEKWEdJGr66yVhEaNjvQS%2BXd4ujzXhi%2Ba0NGJXr7AElbC0PCX8LWEsm%2FDUfXrSefI0I1AZWVJSBBv5BwRDWitL2I8SLaKycjeGBWoNhR0xYQwex2lbVOOqO1GFihFsCqHu6bcsbe3pM5tF%2FgGyqkPlbPbiIz%2Bi%2BK0MtprqJYxvh58PNyJoDRfluTPRIDqZftWcFqB6I4NH3o33B9FLkwY0NfL%2FgenUnzgI1dJFPdjbLtwcSmcEbZ2stN0alLASdR4j89o2yiVkbgm6fO0dd9t8jRq%2BcCW0e%2Fa5l%2B71HrY7IOp1CdiANZ1LOUbLs5Qmor62O0AztHYYFxD09tVF8FLjE6UrzVKaUzYhHZpSHsY2SOyxNQXQqWtjb4T4jRC7FbLCVGDvhNzi6uIRDe8WtnE%2BfHr8x%2FH8DA%3D%3D%3C%2Fdiagram%3E%3C%2Fmxfile%3E" style="background-color: rgb(255, 255, 255);"><defs/><g transform="translate(0.5,0.5)"><path d="M 8 108 L 28 108 Q 38 108 41.71 98.72 L 74.29 17.28 Q 78 8 88 8 L 108 8" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 100 12 L 100 4 M 108 4 L 100 8 L 108 12" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/></g></svg>    
+                          </a>
+                          <a href="#" class="list-group-item"> 
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="118px" height="118px" version="1.1" content="%3Cmxfile%20type%3D%22device%22%20userAgent%3D%22Mozilla%2F5.0%20(Windows%20NT%206.2%3B%20WOW64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F47.0.2526.106%20Safari%2F537.36%22%20version%3D%225.2.7.0%22%20editor%3D%22www.draw.io%22%3E%3Cdiagram%3EfZNBU%2FMgEIZ%2FTe4NOFWP31djvTg67cEzhm3CSNgOJbbx1xfCUho7MZfCsy%2FvLsu24KvutLZi376iBF2whTwV%2FKlgrLzjC%2F8TyBDJ%2FZJAY5UkUQZb9QMEk6xXEg4ToUPUTu2nsEZjoHYTJqzF41S2Qz3NuhdNypjBthb6ln4o6dpIH9gy8xdQTZsyl8vHGPkU9VdjsTeUr2B8N34x3InkNV6UV76JFtHbhFV3WoEOjUw9it14noleirRgqJC%2FD%2FhQOPAtdE%2F3jODghnRxkL4PtPWuyg0b0MIpNFWO%2FG9dp72g9Esw8l9ouN9Wm04Y%2BWaCIhoHt9laR0SFrgE7cHbwEpohlkaIJoilCTrm9ygXxNrrt0hQ0Aw0F%2B9LundUvorZXDzlShYH7G0NdOq6wb%2BM%2BFzRycgJ24C7MfKLqx5kNL5f2uY5ifL8z%2BPVGQ%3D%3D%3C%2Fdiagram%3E%3C%2Fmxfile%3E" style="background-color: rgb(255, 255, 255);"><defs/><g transform="translate(0.5,0.5)"><path d="M 8 108 L 28 108 Q 38 108 41.71 98.72 L 74.29 17.28 Q 78 8 88 8 L 108 8" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 104 12 L 104 4 M 100 12 L 100 4" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/></g></svg>
+                          </a>
+                        <a href="#" class="list-group-item"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120px" height="120px" version="1.1" content="%3Cmxfile%20type%3D%22device%22%20userAgent%3D%22Mozilla%2F5.0%20(Windows%20NT%206.2%3B%20WOW64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F47.0.2526.106%20Safari%2F537.36%22%20version%3D%225.2.7.0%22%20editor%3D%22www.draw.io%22%3E%3Cdiagram%3EfZNBU%2FMgEIZ%2FTe4NaNWj1lgvzue0B88YtgkjYTuE2MZfXxKW0tgv9hJ4dtmXfdlmfNUc11bs6zeUoDO2kMeMP2eM5Td84T8D6QO5WxKorJKUlMBW%2FQDBmNYpCe0k0SFqp%2FZTWKIxULoJE9biYZq2Qz1V3YsqKiawLYW%2Bph9KujrQe7ZM%2FBVUVUflfPkQIp%2Bi%2FKosdob0MsZ34y%2BEGxFrjY3ywptoEX2ZYdUcV6AHI6NHwY2Xmej5khYMXeTvAz40HPgWuqM%2BA2hdHxsH6X2gra%2BqXL8BLZxCU6TIU%2B0a7RNyvwQjHwfD%2FbbYNMLIf2bIaJ2w7n%2BBoDjIzDYxIupgDdiAs71PoeFitzQjNFosjtYhPVS%2BIFZfPlKEgoajOtc%2By72j8reY1eJRK5ZosbMl0KlL538V4nOXjoW8XRW4q0J%2BceFBQuPDxm0aoJCe%2FpK8OAE%3D%3C%2Fdiagram%3E%3C%2Fmxfile%3E" style="background-color: rgb(255, 255, 255);"><defs/><g transform="translate(0.5,0.5)"><path d="M 9 109 L 29 109 Q 39 109 42.71 99.72 L 75.29 18.28 Q 79 9 89 9 L 109 9" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 13 105 L 13 113 M 17 105 L 17 113" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 105 13 L 105 5 M 101 13 L 101 5" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/></g></svg>
+                    </a>
+                        <a href="#" class="list-group-item"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="118px" height="118px" version="1.1" content="%3Cmxfile%20type%3D%22device%22%20userAgent%3D%22Mozilla%2F5.0%20(Windows%20NT%206.2%3B%20WOW64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F47.0.2526.106%20Safari%2F537.36%22%20version%3D%225.2.7.0%22%20editor%3D%22www.draw.io%22%3E%3Cdiagram%3EfZPBUsIwEIafpnfaIMpRseDFGQcOnmO7tBnTLBNSoT4922ZDqEztheTbzf9vNksiVs15Y%2BWhfscSdJLNynMiXpMsS%2BdiRj896Tx5XDCorCo5KYKd%2BgWGIa1VJRxHiQ5RO3UYwwKNgcKNmLQWT%2BO0Peqx60FWwTGCXSH1Pf1Upas9fcoWkb%2BBqurgnC6WPvIli%2B%2FKYmvYL8nEfvh8uJFBa7ioyKmJFpFk%2BlVzXoHuGxl65Luxnohei7RguJD%2FD1CoP%2FAjdcv39ODounBxKKkPvCVV5botaOkUmjxGXmrXaEpIaQmmfO4bTtt8i6aPElorMvYJ3qLXnax6QFzyBrABZztK4WkSDzwUPEvZkven%2BDLpjFl9%2ByoBSp6G6qp9tftARVVMeongFSSO2NoC%2BNRtq%2F8IzaeKDkJO2grcnRAtbnoQ0fCSYRsnxqfH%2F6DILw%3D%3D%3C%2Fdiagram%3E%3C%2Fmxfile%3E" style="background-color: rgb(255, 255, 255);"><defs/><g transform="translate(0.5,0.5)"><path d="M 8 108 L 28 108 Q 38 108 41.71 98.72 L 74.29 17.28 Q 78 8 88 8 L 108 8" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 104 12 L 104 4" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/></g></svg>  
+                    </a>
+                              </div>
+                </div>
+            </div>
+        </div>
+
+
+
+          </div>
+        </div>
+
+        <div class="col-sm-7 text-left"> 
+           <!--TABS-->
+           <ul class="nav nav-tabs">  
+            <li class="active"><a data-toggle="tab" href="#hoja1">Hoja 1</a></li>
+            <li><a data-toggle="tab" href="#hoja2">Hoja 2</a></li>
+            <li><a data-toggle="tab" href="#hoja3">Hoja 3</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div id="hoja1" class="tab-pane fade in active">
+              
+            </div>
+            <div id="hoja2" class="tab-pane fade">
+             
+            </div>
+            <div id="hoja3" class="tab-pane fade">
+              
+            </div>
+          
+          </div>
+        </div>
+        
+
+         <!--CHAT-->
+          <div class="col-sm-3 sidenav">
+             
+              <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <span class="glyphicon glyphicon-comment"></span> Chat
+                                    <div class="btn-group pull-right">
+                                        <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                            <span class="glyphicon glyphicon-chevron-down"></span>
+                                        </button>
+                                        <ul class="dropdown-menu slidedown">
+                                            <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-refresh">
+                                            </span>Refresh</a></li>
+                                            <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-ok-sign">
+                                            </span>Available</a></li>
+                                            <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-remove">
+                                            </span>Busy</a></li>
+                                            <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-time"></span>
+                                                Away</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-off"></span>
+                                                Sign Out</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <ul class="chat">
+                                        <li class="left clearfix"><span class="chat-img pull-left">
+                                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                                        </span>
+                                            <div class="chat-body clearfix">
+                                                <div class="header">
+                                                    <strong class="primary-font">Joyce Sarmiento</strong> <small class="pull-right text-muted">
+                                                        <span class="glyphicon glyphicon-time"></span>12 mins ago</small>
+                                                </div>
+                                                <p>
+                                                    Texto Joyce
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li class="right clearfix"><span class="chat-img pull-right">
+                                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                                        </span>
+                                            <div class="chat-body clearfix">
+                                                <div class="header">
+                                                    <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>13 mins ago</small>
+                                                    <strong class="pull-right primary-font">Kattya Desiderio</strong>
+                                                </div>
+                                                <p>
+                                                  Texto Kattya
+                                                </p>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="panel-footer">
+                                    <div class="input-group">
+                                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-warning btn-sm" id="btn-chat">
+                                                Send</button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         </div>
+                        </div>
+
+           <!--END CHAT-->
+             
+            </div>
+   
+      </div>
+    </div>
+	<!--END CONTAINER-->
+         <footer>
+        <small>Proyecto DAW &copy; 2015</small>
+        <hr>
+            <div class="text-center center-block">
+                <p class="txt-railway">- Modelador -</p>
+                <br />
+                    <a href="https://www.facebook.com"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+	                <a href="https://twitter.com"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+	                <a href="https://plus.google.com"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+                    <a href="https://github.com"><i id="social" class="fa fa-github-square fa-3x social-gb"></i></a>
+                    <a href="https://www.linkedin.com"> <i id="social" class="fa fa-linkedin-square fa-3x social-li"></i></a>
+             </div>
+             <hr>
+
+    </footer>
     </body>
 </html>

@@ -4,184 +4,73 @@
         <title>Proyecto Daw </title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/perfil.css">  
         <link rel="stylesheet" href="css/principal.css">
-       <link rel="stylesheet" href="css/perfil.css">
+        
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" ></script>
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>  
+           
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
  </head>
  <body data-spy="scroll" data-target=".navbar" data-offset="50">
 <header>
-    <div><h1 id="marquesina"><span>Diagrams</span><br><span>Done Right</span></h1></div>
+    
 </header>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>                        
-          </button>
-          <a class="navbar-brand" href="#"><img src="img/logo1.png" class="img-circle" alt="ICO-BRAND" width="30" height="30"></a>
-        </div>
-        <div>
-          <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#"><img src="img/logo1.png" class="img-circle" alt="Cinque Terre" width="30" height="30"></a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+       <ul class="nav navbar-nav">
               <li><a href="index.html#section1" target="_blank">What's New?</a></li>
               <li><a href="index.html#section2" target="_blank">Features</a></li>
               <li><a href="index.html#section3" target="_blank">Examples</a></li>
               <li><a href="index.html#section4" target="_blank">About us</a></li>
             </ul>
-        <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>   Joyce Sarmiento<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="index.html" target="_top">log out</a></li>
-          </ul>
-        </li>
-      </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <span class="glyphicon glyphicon-user"></span>   Joyce Sarmiento    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="pull-right"><img alt="User Pic" src="img/thumb/1.jpg" class="img-thumbnail img-responsive " width="150" height="75"></a></li>
+                        <li><a href="index.html" target="_top">log out</a></li>
+                    </ul>
+                </li>
+              </ul>
+
+      </div>
     </div>
-</div></div>
-</nav>
-<style>
-  body {
-    position: relative;
-    overflow-y: auto;
-}
-    
-    .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
-    text-shadow: 0 0px 0;}
-    
+  </div>
+</nav>    
 
-header{
-    position: relative;
-    padding-top:50px;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    overflow: hidden;
-}
-#marquesina{
-   text-align: center;
-   color: #fff;
-   font-family: Avenir,Helvetica,Arial,sans-serif;
-   font-weight: 100;
-   font-size: 34px;
-}
-
-footer{
-       padding-top:50px;
-       text-align: center;
-       background: #333;
-       border-top: 1px solid #666;
-       color: #999;
-}
-
-
-/*Thumbs*/
-.src-image {
-  display: none;
-}
-
-.card {
-  overflow: hidden;
-  position: relative;
-  border: 1px solid #CCC;
-  border-radius: 8px;
-  text-align: center;
-  padding: 0;
-  background-color: #777;
-  color: rgb(247,247,247);
-}
-
-.card .header-bg {
-  /* This stretches the canvas across the entire hero unit */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  border-bottom: 1px #FFF solid;
-  /* This positions the canvas under the text */
-  z-index: 1;
-}
-.card .avatar {
-  position: relative;
-  margin-top: 15px;
-  z-index: 100;
-}
-
-.card .avatar img {
-  width: 100px;
-  height: 100px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  border: 5px solid rgba(0,0,30,0.8);
-}
-
-.thumb-f{
-    padding-top:50px;
-    padding-left:200px;
-    text-align: center;
-}
-/*Features*/
-.think-draw-collaborate {
-    background: url(icons.png) 50% 50px transparent no-repeat;
-    height:240px;
-    padding-top: 50px;
-}
-
-.tdc-wrapper {
-    background-color: #f7f7f7;
-    padding-bottom: 40px;
-}
-.think-draw-collaborate h2 {
-    margin-top: 170px;
-    margin-bottom: 10px;
-    padding-right: 20px;
-}
-.think-draw-collaborate p {
-    font-size: 14px;
-    font-weight: 300;
-    color: #777777;
-    padding: 0 20px;
-    text-align: left;
-}
-.span4 {
-    width: 300px;
-    float: left;
-}   
-     
-</style>         
-<div class="container-fluid text-center">    
-  <div class="row content">
-    <div class="col-sm-12 text-left"> 
+<br>
+<div class="container">
         <div class="row">
-            <div id="infoContainer"class="col-md-6">
-                <div id="UserInfo" class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">
-                            PROFILE
-                        </h3>       
-                    </div>
-                    <div id="UserInfoBody" class="panel-body" >
-                      <div class="row">
-                      <div class="col-md-3 col-lg-3 "> 
-                        <img alt="User Pic" src="img/thumb/1.jpg" class="img-rounded img-responsive " width="150" height="75">
-                        <br></div>
-                          <div class="col-md-3 col-lg-3 "> 
-                     <table class="table table-user-information">
+  		<div class="col-sm-13">
+        <div class="jumbotron backGround">
+        <h2>User Profile</h2>      
+         </div></div>
+    	
+    </div>
+    <br>
+    <div class="row">
+  		<div class="col-sm-6"><!--left col-->    
+          <div class="panel panel-primary">
+            <div class="panel-heading">Perfil  <i class="glyphicon glyphicon-user"></i></div>
+             
+            <div class="panel-body">
+                    <table class="table table-user-information">
                     <tbody>
                       <tr>
                         <td>Code:</td>
@@ -201,31 +90,90 @@ footer{
                       </tr> 
                     </tbody>
                   </table>
-                     </div> 
-              
-                       
-                    </div>
-                    </div>
-                </div>
+                          
+            </div>
+          </div>
+          
+        </div><!--/col-6-->
+    	<div class="col-sm-6">
+          <div class="row">
+  		   <div class="panel panel-primary">
+               <div class="panel-heading">
+                <h3 class="panel-title">Created Documents  <i class="glyphicon glyphicon-file"></i>
+                  <a href="workarea.html" target="_top" >
+                  <span class="glyphicon glyphicon-plus"></span></a>  
+               </h3>
+            </div>
+            <div class="panel-body">
+            <!--FIRST ROW CAROUSEL-->
+                
+             <div class="row">
+                 <div class='col-md-12'>
+                          <div class="carousel slide media-carousel" id="media">
+                            <div class="carousel-inner">
+                              <div class="item  active">
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    <a class="thumbnail" href="#"><img alt=".." src="img/carrusel/2.jpg"></a>
+                                  </div>          
+                                   <div class="col-md-6">
+                                    <a class="thumbnail" href="#"><img alt=".." src="img/carrusel/1.jpg"></a>
+                                  </div>  
+                                          
+                                </div>
+                              </div>
+                              <div class="item">
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    <a class="thumbnail" href="#"><img alt=".." src="img/carrusel/3.jpg"></a>
+                                  </div>          
+                                   <div class="col-md-6">
+                                    <a class="thumbnail" href="#"><img alt=".." src="img/carrusel/2.jpg"></a>
+                                  </div>  
+                                       
+                                </div>
+                              </div>
+                              <div class="item">
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    <a class="thumbnail" href="#"><img alt=".." src="img/carrusel/5.png"></a>
+                                  </div> 
+                                    <div class="col-md-6">
+                                    <a class="thumbnail" href="#"><img alt=".." src="img/carrusel/1.jpg"></a>
+                                  </div>  
+                                                   
+                                </div>
+                              </div>
+                            </div>
+                            <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
+                            <a data-slide="next" href="#media" class="right carousel-control">›</a>
+                          </div>                          
+                        </div>         
               </div>
-
-            <div id="shareDocs" class="col-md-6">
-                <div id="UserDocs" class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">
-                            SHARED DOCUMENTS
-                        </h3>       
-                    </div>
-                    <div class="panel-body share">                     
-	                        <div class="row "> 
-                                <div class="col-xs-8 col-sm-6 col-md-6">
-		                       
-                                        <div class="container">  
-<div class="carousel slide" id="myCarousel">
+            <!--SECOND ROW OPTION BUTTON-->
+             <div class="row">
+           
+            </div>
+            </div>
+          </div>
+    	 
+        </div>
+           <div class="row">
+           <div class="panel panel-primary">
+  		   <div class="panel-heading">
+                <h3 class="panel-title">Shared Documents <i class="glyphicon glyphicon-star"></i> 
+                  <a href="workarea.html" target="_top" >
+                  <span class="glyphicon glyphicon-plus"></span></a>  
+               </h3>
+            </div>
+            <div class="panel-body">
+             <div class="row">
+                
+               <div class="carousel slide"  id="myCarousel">
         <div class="carousel-inner">
             <div class="item active">
                     <ul class="thumbnails">
-                        <li class="col-sm-3">
+                        <li class="col-md-4">
     						<div class="fff">
 								<div class="thumbnail">
 									<a href="#"><img src="img/uml1.jpg" alt="diagrama1"></a>
@@ -233,35 +181,30 @@ footer{
 								<div class="caption">
 									<h4>ER-Bases II</h4>
 									<p>Shared With:<br>+ Angely Oyola</p>
-<<<<<<< HEAD
-                                    
-                                <a href="workarea.html" target="_top" >
-          <span class="glyphicon glyphicon-pencil"></span></a>
-								
-=======
-<<<<<<< HEAD
-									<a class="btn btn-mini" href="workarea.html" target="_top">» Edit</a>
-=======
-									<a class="btn btn-mini" href="workArea1.html" target="_top">» Edit</a>
->>>>>>> origin/master
+									<a href="workarea.html" target="_top" >
+                                        <span class="glyphicon glyphicon-pencil"></span></a>
 								</div>
->>>>>>> origin/master
                             </div>
                         </li>
-                        <li class="col-sm-3">
+                        <li class="col-md-4">
 							<div class="fff">
 								<div class="thumbnail">
-									<a href="#"><img src="img/uml2.jpg" alt="diagrama2"></a>
+									<a href="#"><img src="img/uml4.jpg" alt="diagrama3"></a>
 								</div>
 								<div class="caption">
 									<h4>Diagrama1</h4>
 									<p>Shared With:<br>+ Kattya Desiderio</p>
-                                    <a href="workarea.html" target="_top" >
-          <span class="glyphicon glyphicon-pencil"></span></a>
+									<a href="workarea.html" target="_top" >
+                                        <span class="glyphicon glyphicon-pencil"></span></a>
 								</div>
                             </div>
                         </li>
-                        <li class="col-sm-3">
+
+                    </ul>
+              </div><!-- /Slide1 --> 
+            <div class="item">
+                    <ul class="thumbnails">
+                        <li class="col-md-4">
 							<div class="fff">
 								<div class="thumbnail">
 									<a href="#"><img src="img/uml3.jpg" alt="diagrama3"></a>
@@ -270,11 +213,11 @@ footer{
 									<h4>Diag ER</h4>
 									<p>Shared With:<br>+ Stephy Quimba <br>+ Sianna Puente</p>
 									<a href="workarea.html" target="_top" >
-          <span class="glyphicon glyphicon-pencil"></span></a>
+                                        <span class="glyphicon glyphicon-pencil"></span></a>
 								</div>
                             </div>
                         </li>
-                        <li class="col-sm-3">
+                        <li class="col-md-4">
 							<div class="fff">
 								<div class="thumbnail">
 									<a href="#"><img src="img/uml4.jpg" alt="diagrama4"></a>
@@ -283,181 +226,38 @@ footer{
 									<h4>Components</h4>
 									<p>Shared With:<br>+ Angely Oyola <br>+ Sianna Puente</p>
 									<a href="workarea.html" target="_top" >
-          <span class="glyphicon glyphicon-pencil"></span></a>
+                                        <span class="glyphicon glyphicon-pencil"></span></a>
 								</div>
                             </div>
                         </li>
-                    </ul>
-              </div><!-- /Slide1 --> 
-            <div class="item">
-                    <ul class="thumbnails">
-                        <li class="col-sm-3">
-							<div class="fff">
-								<div class="thumbnail">
-									<a href="#"><img src="img/carrusel/11.jpg" alt="diagrama4"></a>
-								</div>
-								<div class="caption">
-									<h4>Components</h4>
-									<p>Shared With:<br>+ Angely Oyola <br>+ Sianna Puente</p>
-									<a href="workarea.html" target="_top" >
-          <span class="glyphicon glyphicon-pencil"></span></a>
-								</div>
-                            </div>
-                        </li>
-                        <li class="col-sm-3">
-							<div class="fff">
-								<div class="thumbnail">
-									<a href="#"><img src="img/carrusel/12.jpg" alt="diagrama4"></a>
-								</div>
-								<div class="caption">
-									<h4>Components</h4>
-									<p>Shared With:<br>+ Angely Oyola <br>+ Sianna Puente</p>
-									<a href="workarea.html" target="_top" >
-          <span class="glyphicon glyphicon-pencil"></span></a>
-								</div>
-                            </div>
-                        </li>
-                        <li class="col-sm-3">
-							<div class="fff">
-								<div class="thumbnail">
-									<a href="#"><img src="img/carrusel/15.jpg" alt="diagrama4"></a>
-								</div>
-								<div class="caption">
-									<h4>Components</h4>
-									<p>Shared With:<br>+ Angely Oyola <br>+ Sianna Puente</p>
-									<a href="workarea.html" target="_top" >
-          <span class="glyphicon glyphicon-pencil"></span></a>
-								</div>
-                            </div>
-                        </li>
-                        <li class="col-sm-3">
-							<div class="fff">
-								<div class="thumbnail">
-									<a href="#"><img src="img/carrusel/14.jpg" alt="diagrama4"></a>
-								</div>
-								<div class="caption">
-									<h4>Components</h4>
-									<p>Shared With:<br>+ Angely Oyola <br>+ Sianna Puente</p>
-									<a href="workarea.html" target="_top" >
-          <span class="glyphicon glyphicon-pencil"></span></a>
-								</div>
-                            </div>
-                        </li>
+
                     </ul>
               </div><!-- /Slide2 --> 
         </div>
-        
+       
        
 	   <nav>
 			<ul class="control-box pager">
 				<li><a data-slide="prev" href="#myCarousel" class=""><i class="glyphicon glyphicon-chevron-left"></i></a></li>
-				<li><a data-slide="next" href="#myCarousel" class=""><i class="glyphicon glyphicon-chevron-right"></i></li>
+				<li><a data-slide="next" href="#myCarousel" class=""><i class="glyphicon glyphicon-chevron-right"></i></a></li>
 			</ul>
 		</nav>
 	   <!-- /.control-box -->   
                               
-    </div><!-- /#myCarousel -->
-        
-</div><!-- /.col-xs-12 -->          
-                                            
-                                            
-</div>
-                                                        <div data-role="main" class="ui-content">
-<<<<<<< HEAD
-                                <a href="workarea.html" target="_top" class="btn btn-info btn-lg">
-=======
-<<<<<<< HEAD
-                                <a href="workarea.html" target="_top" class="btn btn-info btn-lg">
-=======
-                                <a href="workArea.html" target="_top" class="btn btn-info btn-lg">
->>>>>>> origin/master
->>>>>>> origin/master
-          <span class="glyphicon glyphicon-plus"></span></a>
-                        </div>
-                        
-
-	                        </div>
-                    
-
-                    </div>
-                </div>
-              </div>
-          </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="panel panel-primary">
-                
-                    <div class="panel-heading">
-                        <h3 class="panel-title">
-                           CREATED DOCUMENTS
-                        </h3>
-                    </div>
-                    
-                    <div class="panel-body">
-                      
-                      <div class='row'>
-                        <div class='col-md-12'>
-                          <div class="carousel slide media-carousel" id="media">
-                            <div class="carousel-inner">
-                              <div class="item  active">
-                                <div class="row">
-                                  <div class="col-md-4">
-                                    <a class="thumbnail" href="#"><img alt=".." src="img/carrusel/2.jpg"></a>
-                                  </div>          
-                                   <div class="col-md-4">
-                                    <a class="thumbnail" href="#"><img alt=".." src="img/carrusel/1.jpg"></a>
-                                  </div>  
-                                    <div class="col-md-4">
-                                    <a class="thumbnail" href="#"><img alt=".." src="img/carrusel/3.jpg"></a>
-                                  </div>         
-                                </div>
-                              </div>
-                              <div class="item">
-                                <div class="row">
-                                  <div class="col-md-4">
-                                    <a class="thumbnail" href="#"><img alt=".." src="img/carrusel/3.jpg"></a>
-                                  </div>          
-                                   <div class="col-md-4">
-                                    <a class="thumbnail" href="#"><img alt=".." src="img/carrusel/2.jpg"></a>
-                                  </div>  
-                                    <div class="col-md-4">
-                                    <a class="thumbnail" href="#"><img alt=".." src="img/carrusel/5.png"></a>
-                                  </div>       
-                                </div>
-                              </div>
-                              <div class="item">
-                                <div class="row">
-                                  <div class="col-md-4">
-                                    <a class="thumbnail" href="#"><img alt=".." src="img/carrusel/5.png"></a>
-                                  </div> 
-                                    <div class="col-md-4">
-                                    <a class="thumbnail" href="#"><img alt=".." src="img/carrusel/1.jpg"></a>
-                                  </div>  
-                                    <div class="col-md-4">
-                                    <a class="thumbnail" href="#"><img alt=".." src="img/carrusel/4.gif"></a>
-                                  </div>                
-                                </div>
-                              </div>
-                            </div>
-                            <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
-                            <a data-slide="next" href="#media" class="right carousel-control">›</a>
-                          </div>                          
-                        </div>
-                      </div>                   
-                                                    <div data-role="main" class="ui-content">
-                                <a href="workarea.html" target="_top" class="btn btn-info btn-lg">
-          <span class="glyphicon glyphicon-plus"></span></a>
-                        </div>
-                        
-                        
-                    </div>
-                    
-                </div> 
+    </div><!-- /#myCarousel -->             
+                  
+             </div>
+             <div class="row"></div>
+            
             </div>
-           </div>
+          </div>
+    	 
+        </div>
+          </div><!--/tab-content-->
+
+        </div><!--/col-9-->
+       
     </div>
-  </div>
-</div>
 
 <footer class="container-fluid text-center">
     <small>Proyecto DAW &copy; 2015</small>
